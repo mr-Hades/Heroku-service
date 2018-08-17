@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block body %}
+ 
+{% from "_formhelpers.html" import render_field %}
+<form method=post>
+  <dl>
+    {{ render_field(form.full_sq) }}
+    {{ render_field(form.life_sq) }}
+    {{ render_field(form.num_room) }}
+    {{ render_field(form.floor) }}
+    {{ render_field(form.max_floor) }}
+    {{ render_field(form.build_year) }}
+    {{ render_field(form.timestamp) }}
+    {{ render_field(form.sub_area) }}
+
+  </dl>
+  <p><input type=submit value=Calculate>
+</form>
+
+<h2>Result</h2>
+  <p>
+{{price}}
+  </p>
+
+<!-- <div class="block1">
+"the price is " {{price}}
+</div> -->
+{% endblock %}
